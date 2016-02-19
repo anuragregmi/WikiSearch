@@ -33,7 +33,6 @@ public partial class MainWindow: Gtk.Window
 	{
 	
 		String text = entry1.Text;
-		Console.WriteLine (run_python (text));
 		result.Text = run_python(text);;
 	}
 
