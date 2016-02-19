@@ -1,0 +1,6 @@
+/home/anurag/Projects/findWiki/findWiki/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/anurag/Projects/findWiki/findWiki/obj/x86/Debug/findWiki.gtk-gui.gui.stetic
+/home/anurag/Projects/findWiki/findWiki/bin/Debug/findWiki.exe.mdb
+/home/anurag/Projects/findWiki/findWiki/bin/Debug/findWiki.exe
+/home/anurag/Projects/findWiki/findWiki/obj/x86/Debug/findWiki.exe
+/home/anurag/Projects/findWiki/findWiki/obj/x86/Debug/findWiki.exe.mdb
