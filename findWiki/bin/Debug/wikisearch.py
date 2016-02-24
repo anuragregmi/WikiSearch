@@ -37,7 +37,7 @@ def seperate(string):
         array[i] = "\n" + array[i]
 
     string = " ".join(array)
-    string = unicodedata.normalize('NFKD', string).encode('ascii', 'ignore')
+    string = unicodedata.normalize('NFKD', string).encode('ascii', 'ignore') #ignoring non ascii characters
 
     return string
 
