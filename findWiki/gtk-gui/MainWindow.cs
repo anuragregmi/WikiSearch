@@ -21,8 +21,6 @@ public partial class MainWindow
 	
 	private global::Gtk.Fixed fixed1;
 	
-	private global::Gtk.MenuBar menubar1;
-	
 	private global::Gtk.Button SearchButton;
 	
 	private global::Gtk.Entry entry1;
@@ -30,6 +28,8 @@ public partial class MainWindow
 	private global::Gtk.ScrolledWindow scrolledwindow2;
 	
 	private global::Gtk.Label result;
+	
+	private global::Gtk.MenuBar menubar1;
 
 	protected virtual void Build ()
 	{
@@ -70,15 +70,6 @@ public partial class MainWindow
 		this.fixed1.Name = "fixed1";
 		this.fixed1.HasWindow = false;
 		// Container child fixed1.Gtk.Fixed+FixedChild
-		this.UIManager.AddUiFromString ("<ui><menubar name='menubar1'><menu name='FileAction' action='FileAction'><menuitem name='QuitAction' action='QuitAction'/></menu><menu name='HelpAction' action='HelpAction'><menuitem name='HelpAction1' action='HelpAction1'/></menu><menu name='AboutAction' action='AboutAction'><menuitem name='AboutUSAction' action='AboutUSAction'/><menuitem name='AboutAppAction' action='AboutAppAction'/></menu></menubar></ui>");
-		this.menubar1 = ((global::Gtk.MenuBar)(this.UIManager.GetWidget ("/menubar1")));
-		this.menubar1.WidthRequest = 442;
-		this.menubar1.Name = "menubar1";
-		this.fixed1.Add (this.menubar1);
-		global::Gtk.Fixed.FixedChild w2 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.menubar1]));
-		w2.X = 5;
-		w2.Y = 4;
-		// Container child fixed1.Gtk.Fixed+FixedChild
 		this.SearchButton = new global::Gtk.Button ();
 		this.SearchButton.WidthRequest = 85;
 		this.SearchButton.CanFocus = true;
@@ -86,9 +77,9 @@ public partial class MainWindow
 		this.SearchButton.UseUnderline = true;
 		this.SearchButton.Label = global::Mono.Unix.Catalog.GetString ("Search");
 		this.fixed1.Add (this.SearchButton);
-		global::Gtk.Fixed.FixedChild w3 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.SearchButton]));
-		w3.X = 360;
-		w3.Y = 31;
+		global::Gtk.Fixed.FixedChild w2 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.SearchButton]));
+		w2.X = 360;
+		w2.Y = 31;
 		// Container child fixed1.Gtk.Fixed+FixedChild
 		this.entry1 = new global::Gtk.Entry ();
 		this.entry1.WidthRequest = 348;
@@ -97,9 +88,9 @@ public partial class MainWindow
 		this.entry1.IsEditable = true;
 		this.entry1.InvisibleChar = '•';
 		this.fixed1.Add (this.entry1);
-		global::Gtk.Fixed.FixedChild w4 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.entry1]));
-		w4.X = 5;
-		w4.Y = 33;
+		global::Gtk.Fixed.FixedChild w3 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.entry1]));
+		w3.X = 5;
+		w3.Y = 33;
 		// Container child fixed1.Gtk.Fixed+FixedChild
 		this.scrolledwindow2 = new global::Gtk.ScrolledWindow ();
 		this.scrolledwindow2.WidthRequest = 433;
@@ -108,23 +99,32 @@ public partial class MainWindow
 		this.scrolledwindow2.Name = "scrolledwindow2";
 		this.scrolledwindow2.ShadowType = ((global::Gtk.ShadowType)(1));
 		// Container child scrolledwindow2.Gtk.Container+ContainerChild
-		global::Gtk.Viewport w5 = new global::Gtk.Viewport ();
-		w5.ShadowType = ((global::Gtk.ShadowType)(0));
+		global::Gtk.Viewport w4 = new global::Gtk.Viewport ();
+		w4.ShadowType = ((global::Gtk.ShadowType)(0));
 		// Container child GtkViewport.Gtk.Container+ContainerChild
 		this.result = new global::Gtk.Label ();
 		this.result.Name = "result";
-		w5.Add (this.result);
-		this.scrolledwindow2.Add (w5);
+		w4.Add (this.result);
+		this.scrolledwindow2.Add (w4);
 		this.fixed1.Add (this.scrolledwindow2);
-		global::Gtk.Fixed.FixedChild w8 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.scrolledwindow2]));
-		w8.X = 6;
-		w8.Y = 65;
+		global::Gtk.Fixed.FixedChild w7 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.scrolledwindow2]));
+		w7.X = 6;
+		w7.Y = 65;
+		// Container child fixed1.Gtk.Fixed+FixedChild
+		this.UIManager.AddUiFromString ("<ui><menubar name='menubar1'><menu name='FileAction' action='FileAction'><menuitem name='QuitAction' action='QuitAction'/></menu><menu name='HelpAction' action='HelpAction'><menuitem name='HelpAction1' action='HelpAction1'/></menu><menu name='AboutAction' action='AboutAction'><menuitem name='AboutUSAction' action='AboutUSAction'/><menuitem name='AboutAppAction' action='AboutAppAction'/></menu></menubar></ui>");
+		this.menubar1 = ((global::Gtk.MenuBar)(this.UIManager.GetWidget ("/menubar1")));
+		this.menubar1.WidthRequest = 442;
+		this.menubar1.Name = "menubar1";
+		this.fixed1.Add (this.menubar1);
+		global::Gtk.Fixed.FixedChild w8 = ((global::Gtk.Fixed.FixedChild)(this.fixed1 [this.menubar1]));
+		w8.X = 5;
+		w8.Y = 4;
 		this.Add (this.fixed1);
 		if ((this.Child != null)) {
 			this.Child.ShowAll ();
 		}
-		this.DefaultWidth = 454;
-		this.DefaultHeight = 514;
+		this.DefaultWidth = 447;
+		this.DefaultHeight = 512;
 		this.Show ();
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler (this.OnDeleteEvent);
 		this.QuitAction.Activated += new global::System.EventHandler (this.onQuit);

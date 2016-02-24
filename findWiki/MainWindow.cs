@@ -25,6 +25,8 @@ public partial class MainWindow: Gtk.Window
 	{
 		result.Text = " Type the search in the text box and\n" +
 			" hit enter or click on Search button to search.";
+		Window w = new Window (WindowType.Popup);
+		w.Show ();
 	}
 
 

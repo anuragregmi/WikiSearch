@@ -2,7 +2,6 @@
 from sys import *
 from urllib2 import *
 from json import *
-import unicodedata
 
 
 def find(title):
@@ -12,34 +11,31 @@ def find(title):
     # adding title to request
     url = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=" + title + "&redirects="
 
-    #try:
+    try:
         # the required data is in {query:{pages{pageid{extract}}}}
-    data = urlopen(url)
-    jobject = load(data)
-    query = jobject['query']
-    pages = query['pages']
-    for i in pages:
-        abc = pages[i]
-    topic = abc['title']
-    summary = abc['extract']
-    summary = seperate(summary)
-    result = topic + summary
+        data = urlopen(url)
+        jobject = load(data)
+        query = jobject['query']
+        pages = query['pages']
+        for i in pages:
+            abc = pages[i]
+        topic = abc['title']
+        summary = abc['extract']
+        summary = seperate(summary)
+        result = topic + summary
 
-    #except:
-        #result = "Search did not matched OR could not connect"
+    except:
+        result = "Search did not matched OR could not connect"
     
     return result
 
 def seperate(string):
     array = string.split()
 
-    for i in range(0, len(array), 8):
+    for i in range(0, len(array),8):
         array[i] = "\n" + array[i]
 
     string = " ".join(array)
-    print " "
-    string = unicodedata.normalize('NFKD', string).encode('ascii', 'ignore')
-
     return string
 
 if __name__ == "__main__":
