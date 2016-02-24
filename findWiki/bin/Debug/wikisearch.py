@@ -12,21 +12,21 @@ def find(title):
     # adding title to request
     url = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=" + title + "&redirects="
 
-    #try:
+    try:
         # the required data is in {query:{pages{pageid{extract}}}}
-    data = urlopen(url)
-    jobject = load(data)
-    query = jobject['query']
-    pages = query['pages']
-    for i in pages:
-        abc = pages[i]
-    topic = abc['title']
-    summary = abc['extract']
-    summary = seperate(summary)
-    result = topic + summary
+        data = urlopen(url)
+        jobject = load(data)
+        query = jobject['query']
+        pages = query['pages']
+        for i in pages:
+            abc = pages[i]
+        topic = abc['title']
+        summary = abc['extract']
+        summary = seperate(summary)
+        result = topic + summary
 
-    #except:
-        #result = "Search did not matched OR could not connect"
+    except:
+        result = "Search did not matched OR could not connect"
     
     return result
 
